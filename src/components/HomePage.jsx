@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import "../styles/HomePage.css";
 
-function HomePage({word}) {
+function HomePage() {
   let typedTextSpan = document.querySelector(".typed-text");
   let cursorSpan = document.querySelector(".cursor");
 
@@ -63,6 +63,9 @@ function HomePage({word}) {
         <span className='typed-text'></span>
         <span class='cursor'></span>
       </h3>
+      <div className="arrow bounce">
+        <a href="/terminal" class="fa-solid fa-terminal fa-5x"></a>
+      </div>
     </div>
   );
 }

@@ -8,7 +8,8 @@
 }
 
 body {
-  background: linear-gradient(white, grey);
+  /* background: linear-gradient(white, grey); */
+  background: #2d2d37;
 }
 
 html {

@@ -1,7 +1,7 @@
 import React from "react";
-import "../styles/ProjectCollection.css";
+import "../styles/TerminalWindow.css";
 
-function ProjectCollection() {
+function TerminalWindow() {
   return (
     <div className='project-list'>
       <h1>Projects</h1>
@@ -9,4 +9,4 @@ function ProjectCollection() {
   );
 }
 
-export default ProjectCollection;
+export default TerminalWindow;

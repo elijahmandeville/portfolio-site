@@ -1,15 +1,16 @@
 import "./App.css";
+import { Route, Routes } from 'react-router-dom';
 import HomePage from "./components/HomePage";
-import ProjectCollection from "./components/ProjectCollection";
+import TerminalWindow from "./components/TerminalWindow";
 
 function App() {
-  const word = "Sauce";
-
   return (
-    <div className='App'>
-      <HomePage word={word} />
-      <ProjectCollection />
-    </div>
+      <div className='App'>
+        <Routes>
+          <Route path="/" element={ <HomePage /> } />
+          <Route path="/terminal" element={ <TerminalWindow /> } />
+        </Routes>
+      </div>
   );
 }
 

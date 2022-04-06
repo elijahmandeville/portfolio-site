@@ -40,3 +40,15 @@
 h1 {
   padding-bottom: 20px;
 }
+
+/* Arrow bounce animation */
+a { color: white; text-decoration: none; }
+
+.arrow {
+  text-align: center;
+  margin: 6% 0;
+}
+
+.fa-terminal:hover {
+  color: orange;
+}
