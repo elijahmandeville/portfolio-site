@@ -1,11 +1,18 @@
 import React from "react";
 import "../styles/TerminalWindow.css";
+import { motion } from 'framer-motion';
 
-function TerminalWindow() {
+function TerminalWindow({ transitionProps }) {
   return (
-    <div className='project-list'>
+    <motion.div 
+      exit="out" 
+      initial="out" 
+      animate="in"
+      variants={transitionProps}
+      className='project-list'>
       <h1>Projects</h1>
-    </div>
+      <a href="/" className="fa-regular fa-hand-spock fa-4x"></a>
+    </motion.div>
   );
 }
 

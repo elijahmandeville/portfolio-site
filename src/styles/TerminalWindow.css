@@ -1,7 +1,15 @@
 .project-list {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   width: 100%;
+}
+.fa-hand-spock {
+  margin: 4% 0;
+}
+
+.fa-hand-spock:hover {
+  color: orange;
 }

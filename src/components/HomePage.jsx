@@ -1,7 +1,8 @@
 import React, {useEffect} from "react";
 import "../styles/HomePage.css";
+import { motion } from 'framer-motion';
 
-function HomePage() {
+function HomePage({ transitionProps }) {
   let typedTextSpan = document.querySelector(".typed-text");
   let cursorSpan = document.querySelector(".cursor");
 
@@ -57,7 +58,12 @@ function HomePage() {
   }, []);
 
   return (
-    <div className='header'>
+    <motion.div 
+      exit="out" 
+      initial="out" 
+      animate="in"
+      variants={transitionProps}
+      className='header'>
       <h1>Elijah Mandeville</h1>
       <h3 id='sentence' class='sentence'>
         <span className='typed-text'></span>
@@ -66,7 +72,7 @@ function HomePage() {
       <div className="arrow bounce">
         <a href="/terminal" class="fa-solid fa-terminal fa-5x"></a>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
