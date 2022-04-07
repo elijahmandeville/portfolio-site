@@ -18,17 +18,26 @@
   font-size: 6rem;
 }
 
+.sentence {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 52px;
+}
+
 .typed-text {
   font-weight: normal;
   font-size: 30px;
   color: orange;
+  align-items: center;
+  text-align: center;
 }
 
 .cursor {
   display: inline-block;
   width: 2px;
   height: 23px;
-  background-color: black;
+  background-color: white;
   margin-left: 7px;
   animation: blink 1s infinite;
 }
@@ -51,4 +60,8 @@ a { color: white; text-decoration: none; }
 
 .fa-terminal:hover {
   color: orange;
+}
+
+.fa-terminal {
+  max-height: 95%;
 }

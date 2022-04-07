@@ -2,9 +2,11 @@ import React, {useEffect} from "react";
 import "../styles/HomePage.css";
 import { motion } from 'framer-motion';
 
-function HomePage({ transitionProps }) {
+function HomePage() {
   let typedTextSpan = document.querySelector(".typed-text");
   let cursorSpan = document.querySelector(".cursor");
+
+  const transition = { duration: .6, ease: [0.43, 0.13, 0.23, 0.96]};
 
   const carouselText = [
     "Front-End Developer",
@@ -59,19 +61,21 @@ function HomePage({ transitionProps }) {
 
   return (
     <motion.div 
-      exit="out" 
-      initial="out" 
-      animate="in"
-      variants={transitionProps}
+      exit={{ scale: 0 }} 
+      initial={{ scale: 0 }} 
+      animate={{ scale: "100%" }}
+      transition={transition}
       className='header'>
-      <h1>Elijah Mandeville</h1>
-      <h3 id='sentence' class='sentence'>
-        <span className='typed-text'></span>
-        <span class='cursor'></span>
-      </h3>
-      <div className="arrow bounce">
-        <a href="/terminal" class="fa-solid fa-terminal fa-5x"></a>
-      </div>
+      <motion.div exit={{ opacity: 0 }} transition={transition} className="home-info">
+        <h1>Elijah Mandeville</h1>
+        <h3 id='sentence' class='sentence'>
+          <span className='typed-text'></span>
+          <span class='cursor'></span>
+        </h3>
+        <div className="arrow bounce">
+          <motion.a transition={transition} whileHover={{ scale: 1.1 }} href="/terminal" class="fa-solid fa-terminal fa-5x"></motion.a>
+        </div>
+      </motion.div>
     </motion.div>
   );
 }

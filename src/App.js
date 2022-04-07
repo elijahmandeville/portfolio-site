@@ -5,29 +5,15 @@ import HomePage from "./components/HomePage";
 import TerminalWindow from "./components/TerminalWindow";
 
 function App() {
-
   const location = useLocation();
 
-  const pageTransition = {
-    in: {
-      opacity: 1,
-      y: 0
-    },
-    out: {
-      opacity: 0,
-      y: "-100%"
-    }
-  }
-
   return (
-      <div className='App'>
-        <AnimatePresence initial={false} exitBeforeEnter>
+        <AnimatePresence exitBeforeEnter>
           <Routes location={location} key={location.pathname}>
-            <Route path="/" element={ <HomePage transitionProps={pageTransition} /> } />
-            <Route path="/terminal" element={ <TerminalWindow transitionProps={pageTransition} /> } />
+            <Route exact path="/" element={ <HomePage /> } />
+            <Route exact path="/terminal" element={ <TerminalWindow /> } />
           </Routes>
         </AnimatePresence>
-      </div>
   );
 }
 

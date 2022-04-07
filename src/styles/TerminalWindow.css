@@ -13,3 +13,7 @@
 .fa-hand-spock:hover {
   color: orange;
 }
+
+.terminal-window {
+  width: 100vw;
+}
