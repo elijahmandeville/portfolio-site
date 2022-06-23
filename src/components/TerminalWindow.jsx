@@ -14,10 +14,10 @@ class TerminalWindow extends Component {
 
   renderPage(page = this.currentPage) {
     //Add functionality for rendering page below terminal based on command. Alternative would be a new page with a back to terminal button.
-      if(page == "") {
+      if(page === "") {
         return
       }
-      if(page == "portfolio") {
+      if(page === "portfolio") {
         return <Portfolio />
       }
   }
